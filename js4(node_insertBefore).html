@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>insertBefore() 메소드</h1>
+    <h2 id="item">JavaScript</h2>
+    <div id="list">  <!-- 부모노드 -->
+        <p>HTML</p> <!-- 자식노드 1-->
+        <p id="criteria">CSS</p> <!-- 자식노드 2-->
+        <p>JQuery</p> <!-- 자식노드 3-->
+    </div>
+    <button onclick="appendNode()">노드추가</button>
+
+    <script>
+        function appendNode() {
+            let parent = document.getElementById("list");
+            // 부모노드 : HTML, CSS, JQuery를 포함하는 <div id="list">
+            let criteriaItem = document.getElementById("criteria");
+            // 기준자식노드 : 값을 넣어줄 공간을 잡아주는 기준
+            let newItem = document.getElementById("item");
+            // 새로운자식노드 : 새로 추가할 노드
+            parent.insertBefore(newItem, criteriaItem);
+            // 부모노드,insertBefore(새로운자식노드, 기준자식노드);
+        }
+    </script>
+</body>
+</html>
+
+<!-- insertBefore -->

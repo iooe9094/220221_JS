@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>appendChild() 메소드</h1>
+    <h2 id="item">JavaScript</h2> <!-- 삽입할 새로운 노드 -->
+    <div id="list"> <!-- 부모노드 -->
+        <p>HTML</p> <!-- 자식노드 1-->
+        <p>CSS</p> <!-- 자식노드 1-->
+        <p>JQuery</p> <!-- 자식노드 1-->
+    </div>
+    <button onclick="appendNode()">노드 추가</button>
+    <script>
+        function appendNode() {
+            let parent = document.getElementById("list");
+            // 부모노드 
+            let newItem = document.getElementById("item");
+            parent.appendChild(newItem);
+        }
+    </script>
+</body>
+</html>
+
+<!-- appendChild() = 새로은 노드를 해당 노드의 자식 노드 리스트 (<p>JQuery 하단) 마지막에 추가 -->
